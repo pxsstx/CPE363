@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        input {
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="w-1/2 mx-auto p-4 bg-gray-100 rounded-lg flex flex-col justify-center gap-y-5 ">
+        <div class="flex gap-x-5">
+            <div><label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="พิมพ์ชื่อของคุณ" required><span
+                    class="text-red-500 ml-2">*</span>
+            </div>
+
+
+            <div> <label for="surename">Surename:</label>
+                <input type="text" id="surename" name="surename" placeholder="พิมพ์นามสกุลของคุณ" required><span
+                    class="text-red-500 ml-2">*</span>
+            </div>
+        </div>
+
+        <div class="flex gap-x-5">
+            <div><label for="date">วัน เดือน ปีเกิด</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div>
+                <label for="age">อายุ:</label>
+                <input type="number" id="age" name="age" placeholder="พิมพ์อายุของคุณ"><br>
+            </div>
+        </div>
+
+        <div><label for="gender">Gender:</label>
+            <input type="radio" id="gender" name="gender" value="male">ชาย
+            <input type="radio" id="gender" name="gender" value="female">หญิง
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="พิมพ์อีเมลของคุณ"><br>
+
+        </div>
+        <div class="flex items-center gap-x-2"><input type="checkbox" id="checkbox" name="checkbox"
+                value="checkbox">ข้อมูลถูกต้อง<br></div>
+
+
+        <div class="flex flex-col gap-y-2">
+            <div><label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="พิมพ์รหัสผ่านของคุณ">
+            </div>
+
+            <div><label for="password">Comfirm Password:</label>
+                <input type="password" id="comfirm_password" name="comfirm_password"
+                    placeholder="พิมพ์รหัสผ่านอีกครั้ง">
+            </div>
+        </div>
+
+
+        <button class="bg-blue-500 text-white p-2 rounded-md w-[100px] mx-auto">submit</button>
+
+    </form>
+</body>
+
+</html>
