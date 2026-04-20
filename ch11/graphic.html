@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic</title>
+</head>
+
+<body>
+    <section>
+        <canvas id="Canvas" width="400" height="200" style="border: 1px solid #37e075;"></canvas>
+        <script>
+            var c = document.getElementById("Canvas");
+            var ctx = c.getContext('2d');
+
+            ctx.moveTo(0, 0);
+            ctx.lineTo(400, 200);
+            ctx.stroke();
+        </script>
+    </section>
+
+
+
+    <section>
+        <canvas id="Canvas2" width="400" height="200" style="border: 1px solid #37e075;"></canvas>
+        <script>
+            var c = document.getElementById("Canvas2");
+            var ctx = c.getContext('2d');
+
+            ctx.font = "30px Arial"
+            ctx.fillStyle = "red";
+            ctx.fillText("Canvas Text Example", 10, 50)
+
+            ctx.font = "40px Georgia"
+            ctx.fillStyle = "green";
+            ctx.fillText("Outline", 10, 120)
+
+            ctx.font = "25px Verdana"
+            ctx.fillStyle = "purple"
+            ctx.textAlign = "center"
+            ctx.textBaseline = "middle"
+            ctx.fillText("Centered!", c.width / 2, c.height / 2)
+        </script>
+    </section>
+
+    <section>
+        <canvas id="Canvas3" width="200" height="200" style="border: 1px solid #37e075;"></canvas>
+        <script>
+            var c = document.getElementById("Canvas3");
+            var ctx = c.getContext('2d');
+
+            // 🔴 Linear Gradient
+            var linearGradient = ctx.createLinearGradient(0, 0, 200, 0);
+            linearGradient.addColorStop(0, "red");
+            linearGradient.addColorStop(1, "blue");
+
+            // ⚫ Radial Gradient
+            var radialGradient = ctx.createRadialGradient(100, 100, 0, 100, 100, 75);
+            radialGradient.addColorStop(0, "white");
+            radialGradient.addColorStop(1, "black");
+
+            // 🟢 Conic Gradient (Browser ใหม่ ๆ รองรับ)
+            var conicGradient = ctx.createConicGradient(0, 150, 150);
+            conicGradient.addColorStop(0, "green");
+            conicGradient.addColorStop(0.5, "yellow");
+            conicGradient.addColorStop(1, "red");
+
+            ctx.fillStyle = linearGradient;
+            ctx.fillRect(0, 0, 200, 100);
+
+            ctx.fillStyle = radialGradient;
+            ctx.beginPath();
+            ctx.arc(100, 100, 75, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = conicGradient;
+            ctx.fillRect(100, 100, 100, 100);
+        </script>
+    </section>
+
+</body>
+
+</html>

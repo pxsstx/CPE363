@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onkeydown="isValidKey(event)">
+    <script>
+        function isValidKey(event) {
+            if (event.key < 48 || event.key > 57) {
+                alert("Enter number only : " + event.key);
+            }
+            else {
+                alert("Enter number only : 0-9");
+            }
+        }
+    </script>
+</body>

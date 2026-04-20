@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex flex-col gap-y-5">
+        <button id="bt" class="w-fit bg-blue-500 text-white px-4 py-2 rounded-md">Button</button>
+
+        <div class="h-[300px] w-[300px] object-cover rounded-2xl overflow-hidden">
+            <img class=" h-full w-full object-cover"
+                src="https://plus.unsplash.com/premium_photo-1757690499338-38c511645730?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+                alt="image" id="img">
+        </div>
+
+        <input type="text" id="input" class="w-fit border-2 border-gray-300 rounded-md p-2">
+    </div>
+
+    <script>
+        document.getElementById("bt").addEventListener("click", function () {
+            alert("มีการกดปุ่ม");
+        });
+
+        document.getElementById("img").addEventListener("click", function () {
+            alert("มีการคลิกภาพ");
+        });
+
+        document.getElementById("input").addEventListener("click", function () {
+            alert("มีการคลิก Textbox");
+        });
+    </script>
+</body>
+
+</html>

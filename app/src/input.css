@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+
+/* Base Font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Heading Font */
+h1,
+h2,
+.brand-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #cbd5e1;
+    /* Slate-300 */
+    outline: none;
+    background-color: #ffffff;
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: #f59e0b;
+    cursor: pointer;
+}
+
+/* Scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
